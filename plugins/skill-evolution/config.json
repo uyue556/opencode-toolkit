@@ -1,0 +1,23 @@
+{
+  "embedding": {
+    "backend": "auto",
+    "modelCache": true
+  },
+  "recommendations": {
+    "topK": 3,
+    "minConfidence": 0.6,
+    "showInline": true,
+    "showOnSessionStart": true
+  },
+  "autoUpdate": {
+    "enabled": false,
+    "descriptionThreshold": 5,
+    "exampleConfidence": 8,
+    "requireApprovalForPrompts": true
+  },
+  "data": {
+    "maxTelemetryAge": 30,
+    "maxLearnings": 1000,
+    "stalenessThreshold": 20
+  }
+}

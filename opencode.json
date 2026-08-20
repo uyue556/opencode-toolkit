@@ -1,0 +1,131 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "agnes-image": {
+      "models": {
+        "agnes-image-2.1-flash": {
+          "name": "Agnes Image 2.1 Flash"
+        }
+      },
+      "name": "Agnes Image 2.1 Flash",
+      "npm": "@ai-sdk/openai-compatible",
+      "env": [
+        "AGNES_API_KEY"
+      ],
+      "options": {
+        "baseURL": "https://apihub.agnes-ai.com/v1"
+      }
+    },
+    "deepseek-v4-pro": {
+      "models": {
+        "deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro"
+        }
+      },
+      "name": "DeepSeek V4 Pro",
+      "npm": "@ai-sdk/openai-compatible",
+      "env": [
+        "DEEPSEEK_API_KEY"
+      ],
+      "options": {
+        "baseURL": "https://api.deepseek.com/v1"
+      }
+    },
+    "xiaomi-mimo": {
+      "models": {
+        "mimo-v2.5": {
+          "name": "MiMo V2.5"
+        }
+      },
+      "name": "Xiaomi MiMo",
+      "npm": "@ai-sdk/openai-compatible",
+      "env": [
+        "MIMO_API_KEY"
+      ],
+      "options": {
+        "baseURL": "https://api.xiaomimimo.com/v1"
+      }
+    },
+    "grok": {
+      "models": {
+        "grok-4.5": {
+          "name": "Grok 4.5"
+        }
+      },
+      "name": "Grok",
+      "npm": "@ai-sdk/openai-compatible",
+      "env": [
+        "GROK_API_KEY"
+      ],
+      "options": {
+        "baseURL": "https://api.x.ai/v1"
+      }
+    },
+    "faro-api": {
+      "models": {
+        "grok-4.5": {
+          "name": "Grok 4.5 (Faro API)"
+        }
+      },
+      "name": "Faro API",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://faroapi.com/v1",
+        "apiKey": "sk-W7AJnXOhDHsMFx6qZifFYwU6nrU329ZoMZa0xsQ2i9tN4LKe"
+      }
+    }
+  },
+  "plugin": [
+    "@bunkercache/opencode-memoir",
+    "envsitter-guard@latest",
+    "opencode-notify",
+    "opencode-autotitle",
+    "@tarquinen/opencode-dcp@latest",
+    "@ykaratkou/opencode-worktree",
+    "opencode-agent-skills",
+    "opencode-skill-evolution@latest"
+  ],
+  "mcp": {
+    "context7": {
+      "type": "local",
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "ctx7sk-6e05af0a-1c6b-44f4-aad9-f9734fa87aa4"
+      }
+    },
+    "firecrawl": {
+      "type": "local",
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "-y",
+        "firecrawl-mcp"
+      ],
+      "env": {
+        "FIRECRAWL_API_KEY": "\u00abredacted:fc-\u2026\u00bb"
+      }
+    },
+    "playwright": {
+      "type": "local",
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "sqlite": {
+      "type": "local",
+      "enabled": true,
+      "command": "uvx",
+      "args": [
+        "mcp-server-sqlite"
+      ]
+    }
+  }
+}
